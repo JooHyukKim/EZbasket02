@@ -10,17 +10,16 @@ if(document.querySelector("span[class=product_title]")!=null){//로그인되어�
 	console.log(category);
 	var image = document.querySelector("img#bigimg");
 	console.log(image);
-	
-	chrome.runtime.sendMessage({data: "logined"}, function(response) {
-	    console.log(response);
+	chrome.storage.local.set({name: price+"&"+category+"&"+image}, function() {
+        console.log('Value is set to ' + name);
+      });
+	chrome.runtime.sendMessage({item: name+"&"+price+"&"+category+"&"+image}, function(response) {
+	console.log(response);
 	});
 	console.log("메세지 전달 완료");
 	
-}else if(document.getElementById("empty_user_thumnail")!=null){
-	console.log("로그아웃상태!!");
-	chrome.runtime.sendMessage({data: "logout"}, function(response){
-		console.log(response);
-	});
+}else {
+	console.log("item not found");
 }
 
 if(document.getElementById("errorMessage")!=null){//로그인되어있다면
