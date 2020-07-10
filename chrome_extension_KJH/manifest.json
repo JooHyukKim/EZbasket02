@@ -18,20 +18,16 @@
     "activeTab",
     "declarativeContent"
   ],
-  "background_page":{
-  	"scripts" : ["background.html"],
-  	"persistent" : false
-  	},
+
   "background":{
   	"scripts" : ["background.js"],
   	"persistent" : false
-  	},
-  	
-  "content_scripts": [
-    {
-        "matches": ["http://localhost:8888/*"],
-        "js": ["content.js"],
-        "all_frames": true
+    },
+    
+    "content_scripts": [{
+      "matches": ["http://*/*"],
+      "js": ["content.js"],
+      "all_frames": true
     }]
   
 }
