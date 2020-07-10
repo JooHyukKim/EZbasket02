@@ -6,7 +6,7 @@
   "version": "1.3.0",
 
   "browser_action": {
-    "default_icon": "img/icon.png",
+    "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   
@@ -18,21 +18,9 @@
     "activeTab",
     "declarativeContent"
   ],
-  "background_page":{
-  	"scripts" : ["background.html"],
-  	"persistent" : false
-  	},
+  
   "background":{
   	"scripts" : ["background.js"],
-<<<<<<< HEAD
-  	"persistent" : true
-    },
-    
-    "content_scripts": [{
-      "matches": ["http://*/*"],
-      "js": ["content.js"],
-      "all_frames": true
-=======
   	"persistent" : false
   	},
   	
@@ -41,7 +29,6 @@
         "matches": ["http://localhost:8888/*"],
         "js": ["content.js"],
         "all_frames": true
->>>>>>> parent of ac360af... word
     }]
   
 }
