@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style type="text/css">
-	body { width:550px;
-	}
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <style type="text/css">
+      body {
+        width: 550px;
+      }
 
-	#productImg{object-fit:contain;}
-	#productList{display:table;width:100%;text-align:center;}
-	#productList li{display:table-cell;width:25%;list-style-type:none;text-align:center;}
-	.list-group{display:table;width:100%;}
-	.list-group li{display:table-cell;width:20%;list-style-type:none;text-align:center;object-fit: contain;}
-</style>
+      #productImg {
+        object-fit: contain;
+      }
+      #productList {
+        display: table;
+        width: 100%;
+        text-align: center;
+      }
+      #productList li {
+        display: table-cell;
+        width: 25%;
+        list-style-type: none;
+        text-align: center;
+      }
+      .list-group {
+        display: table;
+        width: 100%;
+      }
+      .list-group li {
+        display: table-cell;
+        width: 20%;
+        list-style-type: none;
+        text-align: center;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top"><button id="addcart">현재 페이지 아이템 추가</button></div>
 
-</head>
-<body>
-<div id="top"><button id=addcart>현재 페이지 아이템 추가</button></div>
-    
-<!-- 장바구니 팝업을 클릭하면 오는 페이지입니다. -->
-<div id="productList bottom">
-    
-    <ul id = "productImgHeader" class="list-group-item"><li>Image</li><li>Name</li><li>Price</li><li>Category</li><li>Delete</li></ul>
-</div>
-<div class="list-group">							
-
-</div>	
-<script src="cart.js">
-</script>
-</body>
-
+    <!-- 장바구니 팝업을 클릭하면 오는 페이지입니다. -->
+    <div class="list-group"></div>
+    <script src="cart.js"></script>
+  </body>
 </html>

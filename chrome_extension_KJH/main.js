@@ -18,7 +18,7 @@ function addProductMapping(inputURL) {
   } else if (inputURL.toLowerCase().includes("auction")) {
     chrome.tabs.executeScript(null, { file: "parser/auction.js" });
   } else {
-    alert("장바구니 추가 에러");
+    alert("InvalidProudctPage Error");
   }
 }
 
