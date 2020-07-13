@@ -29,7 +29,7 @@ function createProduct() {
     categor += cat.innerHTML;
   });
   var product = {
-    shop: "Auction",
+    shop: "Auction", // 1shop
     name: document.getElementsByClassName("text__item-title")[0].innerHTML,
     price: document.querySelector("strong.price_real").innerHTML,
     imgSrc: document.querySelector("ul.viewer").getElementsByTagName("img")[0]
