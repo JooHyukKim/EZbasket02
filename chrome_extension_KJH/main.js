@@ -70,6 +70,8 @@ function addProductMapping(inputURL) {
     chrome.tabs.executeScript(null, { file: "parser/codibook.js" });
   }else if (inputURL.toLowerCase().includes("lookpin")) {
     chrome.tabs.executeScript(null, { file: "parser/lookpin.js" });
+  }else if (inputURL.toLowerCase().includes("brandi")) {
+    chrome.tabs.executeScript(null, { file: "parser/brandi.js" });
   }else {
     alert("InvalidProudctPage Error");
   }
