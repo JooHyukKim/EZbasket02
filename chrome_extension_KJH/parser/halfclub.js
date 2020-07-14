@@ -1,7 +1,7 @@
 console.log("컨텐트 스크립트 시작");
 
 chrome.storage.sync.get(["productList"], function (items) {
-  alert("hi auction ");
+  alert("hi halfClub ");
   var productList = new Array();
   if (items.productList == null) {
     console.log("No Items in List");
@@ -23,18 +23,18 @@ chrome.storage.sync.get(["productList"], function (items) {
 });
 
 function createProduct() {
-  var cats = document.querySelector("div.loc").querySelectorAll("a.dropdown");
+/*  var cats = document.querySelector("div.loc").querySelectorAll("a.dropdown");
   var categor = "";
   cats.forEach((cat) => {
     categor += cat.innerHTML;
-  });
+  });*/
   var product = {
-    shop: "Auction",
-    name: document.getElementsByClassName("text__item-title")[0].innerHTML,
-    price: document.querySelector("strong.price_real").innerHTML,
-    imgSrc: document.querySelector("ul.viewer").getElementsByTagName("img")[0]
+    shop: "HalfClub",
+    name: document.querySelector("p.line2 strong.tit").innerHTML,
+    price: document.querySelector("strong.saleP.blk").innerHTML,
+    imgSrc: document.querySelector("#hfContPhoto li.active").getElementsByTagName("img")[0]
       .src,
-    category: categor,
+    category: null,
     url: document.URL,
   };
   return product;

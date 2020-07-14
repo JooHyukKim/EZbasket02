@@ -1,7 +1,7 @@
 console.log("컨텐트 스크립트 시작");
 
 chrome.storage.sync.get(["productList"], function (items) {
-  alert("hi wconcept ");
+  alert("hi brandi ");
   var productList = new Array();
   if (items.productList == null) {
     console.log("No Items in List");
@@ -23,18 +23,22 @@ chrome.storage.sync.get(["productList"], function (items) {
 });
 
 function createProduct() {
-  var cats = document.querySelector("ul.location").querySelectorAll("button");
+/*  var cats = document.querySelector("ul.location").querySelectorAll("button");
   var categor = "";
   cats.forEach((cat) => {
     categor += cat.innerHTML;
-  });
+  });*/
+  var price1=document.querySelector("div.detail_price");
+  price1.querySelector("b").remove();
+  price1.querySelector("span").remove();
+  
   var product = {
-    shop: "W Concept",
-    name: document.querySelector("h3.product").innerHTML,
-    price: document.querySelector("dd.sale em").innerHTML,
-    imgSrc: document.querySelector("div.img_area").getElementsByTagName("img")[0]
+    shop: "Brandi",
+    name: document.querySelector("div.detail_title").innerHTML,
+    price: price1.innerHTML,
+    imgSrc: document.querySelector("li.lslide.active").getElementsByTagName("img")[0]
       .src,
-    category: categor,
+    category: null,
     url: document.URL,
   };
   return product;
