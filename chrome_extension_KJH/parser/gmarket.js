@@ -23,16 +23,17 @@ chrome.storage.sync.get(["productList"], function (items) {
 });
 
 function createProduct() {
-  var cats = document.querySelector("div.loc").querySelectorAll("a.dropdown");
+  var cats = document.querySelector("div.location-navi").querySelectorAll("li");
   var categor = "";
   cats.forEach((cat) => {
-    categor += cat.innerHTML;
+    categor += cat.getElementsByTagName("a")[0].text;
+    categor+= " ";
   });
   var product = {
-    shop: "Auction",
-    name: document.getElementsByClassName("text__item-title")[0].innerHTML,
+    shop: "Gmarket",
+    name: document.getElementsByTagName("title")[0].innerText,
     price: document.querySelector("strong.price_real").innerHTML,
-    imgSrc: document.querySelector("ul.viewer").getElementsByTagName("img")[0]
+    imgSrc: document.querySelector("div.box__viewer-container").getElementsByTagName("img")[0]
       .src,
     category: categor,
     url: document.URL,

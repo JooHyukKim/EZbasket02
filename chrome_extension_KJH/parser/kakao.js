@@ -1,7 +1,6 @@
 console.log("컨텐트 스크립트 시작");
 
 chrome.storage.sync.get(["productList"], function (items) {
-  alert("hi auction ");
   var productList = new Array();
   if (items.productList == null) {
     console.log("No Items in List");
@@ -21,20 +20,23 @@ chrome.storage.sync.get(["productList"], function (items) {
     console.log("item not found");
   }
 });
-
 function createProduct() {
-  var cats = document.querySelector("div.loc").querySelectorAll("a.dropdown");
-  var categor = "";
-  cats.forEach((cat) => {
-    categor += cat.innerHTML;
-  });
+  
+  var bgImg  = "";
+  bgImg = document.querySelector("div.item_swipe img");
+  if (bgImg==null || bgImg=="") {
+    bgImg +=document.querySelector("div.thumb_photo").style.backgroundImage;
+    bgImg = bgImg.substring(9,bgImg.length-2);
+  }else{
+    bgImg= bgImg.src;
+  }
+  alert(bgImg);
   var product = {
-    shop: "Auction",
-    name: document.getElementsByClassName("text__item-title")[0].innerHTML,
-    price: document.querySelector("strong.price_real").innerHTML,
-    imgSrc: document.querySelector("ul.viewer").getElementsByTagName("img")[0]
-      .src,
-    category: categor,
+    shop: "Kakao",
+    name: document.querySelector("strong.tit_detail").textContent.trim(),
+    price: document.querySelectorAll("span.num_price")[0].textContent+" | "+document.querySelectorAll("span.num_price")[1].textContent,
+    imgSrc: bgImg,
+    category: "Unknown Category",
     url: document.URL,
   };
   return product;

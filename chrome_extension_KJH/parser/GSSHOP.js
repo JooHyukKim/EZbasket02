@@ -1,7 +1,6 @@
 console.log("컨텐트 스크립트 시작");
 
 chrome.storage.sync.get(["productList"], function (items) {
-  alert("hi auction ");
   var productList = new Array();
   if (items.productList == null) {
     console.log("No Items in List");
@@ -23,18 +22,13 @@ chrome.storage.sync.get(["productList"], function (items) {
 });
 
 function createProduct() {
-  var cats = document.querySelector("div.loc").querySelectorAll("a.dropdown");
-  var categor = "";
-  cats.forEach((cat) => {
-    categor += cat.innerHTML;
-  });
+  var cats = document.querySelector("span.bold").textContent.trim();
   var product = {
-    shop: "Auction",
-    name: document.getElementsByClassName("text__item-title")[0].innerHTML,
-    price: document.querySelector("strong.price_real").innerHTML,
-    imgSrc: document.querySelector("ul.viewer").getElementsByTagName("img")[0]
-      .src,
-    category: categor,
+    shop: "GSShop",
+    name: document.querySelector("p.product-title").textContent.trim(),
+    price: document.querySelector("span.price-definition-ins ins").textContent.trim(),
+    imgSrc: document.querySelector("a.btn_img img").src,
+    category: cats,
     url: document.URL,
   };
   return product;

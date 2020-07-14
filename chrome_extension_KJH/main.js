@@ -19,7 +19,9 @@ function reqCurrentTab(callback) {
 } //function getCurrentTabUrl(callback) {
 
 function addProductMapping(inputURL) {
-  console.log("addProductMapping");
+
+  try {
+    console.log("addProductMapping");
          if (inputURL.toLowerCase().includes("musinsa")) {
     chrome.tabs.executeScript(null, { file: "parser/musinsa.js" });
   } else if (inputURL.toLowerCase().includes("auction")) {
@@ -36,16 +38,18 @@ function addProductMapping(inputURL) {
     chrome.tabs.executeScript(null, { file: "parser/g9.js" });
   }else if (inputURL.toLowerCase().includes("store.kakao")) {
     chrome.tabs.executeScript(null, { file: "parser/kakao.js" });
-  }else if (inputURL.toLowerCase().includes("wemakeprice.co.kr")) {
+  }else if (inputURL.toLowerCase().includes("wemakeprice.com")) {
     chrome.tabs.executeScript(null, { file: "parser/wemakeprice.js" });
-  }else if (inputURL.toLowerCase().includes("SSG.com")) {
-    chrome.tabs.executeScript(null, { file: "parser/SSG.js" });
+  }else if (inputURL.toLowerCase().includes("ssg.com")) {
+    chrome.tabs.executeScript(null, { file: "parser/ssg.js" });
+  }else if (inputURL.toLowerCase().includes("tmon.co.kr")) {
+    chrome.tabs.executeScript(null, { file: "parser/tmon.js" });
   }else if (inputURL.toLowerCase().includes("lotteon")) {
     chrome.tabs.executeScript(null, { file: "parser/lotteon.js" });
   }else if (inputURL.toLowerCase().includes("lotteimall")) {
     chrome.tabs.executeScript(null, { file: "parser/lotteimall.js" });
-  }else if (inputURL.toLowerCase().includes("GSSHOP")) {
-    chrome.tabs.executeScript(null, { file: "parser/GSSHOP.js" });
+  }else if (inputURL.toLowerCase().includes("gsshop")) {
+    chrome.tabs.executeScript(null, { file: "parser/gsshop.js" });
   }else if (inputURL.toLowerCase().includes("CJMALL")) {
     chrome.tabs.executeScript(null, { file: "parser/cjmall.js" });
   }else if (inputURL.toLowerCase().includes("hnsmall")) {
@@ -68,5 +72,8 @@ function addProductMapping(inputURL) {
     chrome.tabs.executeScript(null, { file: "parser/lookpin.js" });
   }else {
     alert("InvalidProudctPage Error");
+  }
+  } catch (error) {
+    alert("error while mapping");
   }
 }

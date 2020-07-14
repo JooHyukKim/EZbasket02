@@ -1,7 +1,6 @@
 console.log("컨텐트 스크립트 시작");
 
 chrome.storage.sync.get(["productList"], function (items) {
-  alert("hi auction ");
   var productList = new Array();
   if (items.productList == null) {
     console.log("No Items in List");
