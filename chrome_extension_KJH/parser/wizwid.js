@@ -23,16 +23,16 @@ chrome.storage.sync.get(["productList"], function (items) {
 });
 
 function createProduct() {
-  var cats = document.querySelector("div.loc").querySelectorAll("a.dropdown");
+  var cats = document.querySelector("#bc-location").querySelectorAll("a.sbSelector");
   var categor = "";
   cats.forEach((cat) => {
     categor += cat.innerHTML;
   });
   var product = {
-    shop: "Auction",
-    name: document.getElementsByClassName("text__item-title")[0].innerHTML,
-    price: document.querySelector("strong.price_real").innerHTML,
-    imgSrc: document.querySelector("ul.viewer").getElementsByTagName("img")[0]
+    shop: "Wizwid",
+    name: document.querySelector("#catalog-view div.contents p").innerHTML,
+    price: document.querySelector("div.price span.discount").innerHTML,
+    imgSrc: document.querySelector("a.jqzoom").getElementsByTagName("img")[0]
       .src,
     category: categor,
     url: document.URL,

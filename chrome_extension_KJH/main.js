@@ -72,6 +72,10 @@ function addProductMapping(inputURL) {
     chrome.tabs.executeScript(null, { file: "parser/lookpin.js" });
   }else if (inputURL.toLowerCase().includes("brandi")) {
     chrome.tabs.executeScript(null, { file: "parser/brandi.js" });
+  }else if (inputURL.toLowerCase().includes("akmall")) {
+    chrome.tabs.executeScript(null, { file: "parser/akmall.js" });
+  }else if (inputURL.toLowerCase().includes("cjmall")) {
+    chrome.tabs.executeScript(null, { file: "parser/cjmall.js" });
   }else {
     alert("InvalidProudctPage Error");
   }

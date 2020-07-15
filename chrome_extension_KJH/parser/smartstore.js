@@ -1,6 +1,7 @@
 console.log("컨텐트 스크립트 시작");
 
 chrome.storage.sync.get(["productList"], function (items) {
+  alert("hi smartstore ");
   var productList = new Array();
   if (items.productList == null) {
     console.log("No Items in List");
@@ -22,16 +23,16 @@ chrome.storage.sync.get(["productList"], function (items) {
 });
 
 function createProduct() {
-  var cats = document.querySelector("div.u_breadcrumbs_wrap").querySelectorAll("li");
+  var cats = document.querySelector("div.loc").querySelectorAll("a.path");
   var categor = "";
   cats.forEach((cat) => {
     categor += cat.innerHTML;
   });
   var product = {
-    shop: "CJMall",
-    name: document.querySelector("div.prd_info h3.prd_tit").innerHTML,
-    price: document.querySelector("span.price_txt").innerHTML,
-    imgSrc: document.querySelector("div.prd_img").getElementsByTagName("img")[0]
+    shop: "Naver Smart Store",
+    name: document.querySelector("dt.prd_name").innerHTML,
+    price: document.querySelector("strong.info_cost span.thm").innerHTML,
+    imgSrc: document.querySelector("div.img_va").getElementsByTagName("img")[0]
       .src,
     category: categor,
     url: document.URL,

@@ -20,18 +20,21 @@ chrome.storage.sync.get(["productList"], function (items) {
     console.log("item not found");
   }
 });
-
+//파워딜 지원 안됨, 새로 추가 필요
 function createProduct() {
-  var cats = document.querySelector("div.u_breadcrumbs_wrap").querySelectorAll("li");
+  var cats = document.querySelector("ul.location").querySelectorAll("div.selBtn01 span");
   var categor = "";
   cats.forEach((cat) => {
     categor += cat.innerHTML;
   });
+  var name1=document.querySelector("div.info_top h2");
+  name1.querySelector("p").remove();
+  name1.querySelector("strong").remove();
   var product = {
-    shop: "CJMall",
-    name: document.querySelector("div.prd_info h3.prd_tit").innerHTML,
-    price: document.querySelector("span.price_txt").innerHTML,
-    imgSrc: document.querySelector("div.prd_img").getElementsByTagName("img")[0]
+    shop: "AKMall",
+    name: name1.innerHTML,
+    price: document.querySelector("li.c_price i").innerHTML,
+    imgSrc: document.querySelector("a.cloud-zoom").getElementsByTagName("img")[0]
       .src,
     category: categor,
     url: document.URL,
