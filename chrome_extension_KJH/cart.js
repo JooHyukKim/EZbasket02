@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
           cart.innerHTML +=
           '<ul class="list-group-item"><li id="productImg"><a href=' +
           product.url +
-          '><img src="' +
+          ' target="_blank"><img src="' +
           product.imgSrc +
           '" width="100px" height="100px" value=' +
           product.url +
@@ -54,6 +54,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }else if(event.target.matches("button#addcart")){
       reqCurrentTab(addProductMapping);
     }
+
   });
   
 });
