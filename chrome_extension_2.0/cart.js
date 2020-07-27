@@ -126,7 +126,7 @@ function reqCurrentTab(callback) {
     }else if (inputURL.toLowerCase().includes("lookpin")) {
       chrome.tabs.executeScript(null, { file: "parser/lookpin.js" });
     }else {
-      alert("InvalidProudctPage Error");
+     // alert("InvalidProudctPage Error"); 현재 페이지는~~~ 파서가 지원되지 않~~
     }
     } catch (error) {
       alert("error while mapping");

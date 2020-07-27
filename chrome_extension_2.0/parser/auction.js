@@ -15,7 +15,7 @@ chrome.storage.sync.get(["productList"], function (items) {
     console.log(productList[0]);
     chrome.storage.sync.set({ productList: productList }, function () {
       console.log("ProductList Set.");
-      alert("WHAT");
+      //alert("WHAT");
       swal({
         position: 'top-end',
         icon: 'success',
