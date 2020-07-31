@@ -1,18 +1,17 @@
 {
-  "manifest_version": 2,
-
-  "name": "통합 장바구니 EZbasket",
-  "description": "여러 사이트의 상품을, 하나의 장바구니에 넣고 비교하세요! Easily add your favorite products on different sites and compare price!",
-  "version": "2.2.0",
-
-  "browser_action": {
-    "default_icon": "img/cart.png",
-    "default_popup": "main.html"
-  },
-
-  "permissions": [
-    "<all_urls>",
-    "storage",
-    "activeTab"
-  ]
+	"manifest_version": 2,
+	"name": "통합 장바구니 EZbasket",
+	"description": "여러 사이트의 상품을, 하나의 장바구니에 넣고 비교하세요!",
+	"version": "2.5.1",
+	"icons": {
+		"128": "img/cart.png"
+	},
+	"browser_action": {
+		"default_icon": "img/cart.png",
+		"default_popup": "main.html"
+	},
+	"permissions": [
+		"storage",
+		"activeTab"
+	]
 }
