@@ -77,9 +77,10 @@ function addProductMapping(inputURL) {
   }else if (inputURL.toLowerCase().includes("cjmall")) {
     chrome.tabs.executeScript(null, { file: "parser/cjmall.js" });
   }else {
-    alert("InvalidProudctPage Error");
+	  chrome.tabs.executeScript(null, { file: "parser/fail.js" });
   }
   } catch (error) {
     alert("error while mapping");
   }
 }
+
