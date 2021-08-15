@@ -1,7 +1,16 @@
 # EZbasket_v2.0 ( LazyCart )
 
-## Chrome Web Store 배포 버전
+## Deployment
 
+1. git clone 프로젝트
+2. 크롬 브라우저 오픈
+2. 다음 URL로 이동 chrome://extensions/
+3. 상단 "Load Unpacked" Button 클릭
+![deployment](./docs/deployment.png)
+4. src 폴더 업로드
+5. 사용시작
+
+## Chrome Web Store 배포 버전
 
 ![1](./docs/1.png)
 ![2](./docs/2.png)
