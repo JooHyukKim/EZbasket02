@@ -6,7 +6,9 @@
 2. 크롬 브라우저 오픈
 2. 다음 URL로 이동 chrome://extensions/
 3. 상단 "Load Unpacked" Button 클릭
+
 ![deployment](./docs/deployment.png)
+
 4. src 폴더 업로드
 5. 사용시작
 
