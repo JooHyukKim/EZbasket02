@@ -2,12 +2,11 @@
 
 ## LazyCart v1.0 고도화 프로세스 정리
 
-![1](./docs/1.png)
-![2](./docs/2.png)
-![3](./docs/3.png)
-![4](./docs/4.png)
-![5](./docs/5.png)
-
+![lc1](./docs/lc1.png)
+![lc2](./docs/lc2.png)
+![lc3](./docs/lc3.png)
+![lc4](./docs/lc4.png)
+![lc5](./docs/lc5.png)
 
 ## Deployment
 
