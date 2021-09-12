@@ -3,12 +3,11 @@
 ## LazyCart v1.0 고도화 프로세스 정리
 
 <p float="left">
-<img src="./docs/lc1.png" alt="drawing" width="50%"/> 
-<img src="./docs/lc2.png" alt="drawing" width="50%"/> 
-<img src="./docs/lc3.png" alt="drawing" width="50%"/> 
-<img src="./docs/lc4.png" alt="drawing" width="50%"/> 
-<img src="./docs/lc5.png" alt="drawing" width="50%"/> 
-
+<img src="./docs/lc1.png" alt="drawing" width="48%"/> 
+<img src="./docs/lc2.png" alt="drawing" width="48%"/> 
+<img src="./docs/lc3.png" alt="drawing" width="48%"/> 
+<img src="./docs/lc4.png" alt="drawing" width="48%"/> 
+<img src="./docs/lc5.png" alt="drawing" width="48%"/> 
 </p>
 
 
