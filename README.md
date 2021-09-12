@@ -2,11 +2,11 @@
 
 ## LazyCart v1.0 고도화 프로세스 정리
 
-![lc1](./docs/lc1.png)
-![lc2](./docs/lc2.png)
-![lc3](./docs/lc3.png)
-![lc4](./docs/lc4.png)
-![lc5](./docs/lc5.png)
+<img src="./docs/lc1.png" alt="drawing" width="50%"/> 
+<img src="./docs/lc2.png" alt="drawing" width="50%"/> 
+<img src="./docs/lc3.png" alt="drawing" width="50%"/> 
+<img src="./docs/lc4.png" alt="drawing" width="50%"/> 
+<img src="./docs/lc5.png" alt="drawing" width="50%"/> 
 
 ## Deployment
 
