@@ -1,4 +1,13 @@
-# EZbasket_v2.0 ( LazyCart )
+# LazyCart v2.0
+
+## LazyCart v1.0 고도화 프로세스 정리
+
+![1](./docs/1.png)
+![2](./docs/2.png)
+![3](./docs/3.png)
+![4](./docs/4.png)
+![5](./docs/5.png)
+
 
 ## Deployment
 
