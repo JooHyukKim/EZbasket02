@@ -1,4 +1,5 @@
 <img src="./docs/mainview.png" alt="drawing" width="48%"/> 
+
 # LazyCart v2.0 란?
 - 간편한 통합 장바구니 담기 서비스
 - 사용방법
